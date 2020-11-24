@@ -3,4 +3,6 @@ import ReactDOM from "react-dom";
 
 import "./style/base.scss";
 
-ReactDOM.render(,document.getElementById("root"));
+import AppRouter from "./router/AppRouter";
+
+ReactDOM.render(<AppRouter />, document.getElementById("root"));
