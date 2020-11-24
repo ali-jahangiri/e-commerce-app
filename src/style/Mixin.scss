@@ -1,0 +1,10 @@
+@mixin para ($size : 2rem, $color : rgb(15, 15, 15)) {
+    font-size: $size;
+    color: $color;
+    font-weight: 700;
+}
+
+@mixin icon-shadow ($color) {
+    text-shadow: $color 0px 0px 20px;
+    color: $color;
+}
