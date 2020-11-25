@@ -10,7 +10,7 @@ const ShopBasket = ({ sum }) => {
   );
 };
 ShopBasket.defaultProps = {
-  sum: 6,
+  sum: 0,
 };
 const mapStateToProps = (state) => ({});
 
