@@ -1,5 +1,3 @@
-const { applyMiddleware } = require("redux");
-
 const getTwoElEnd = (array) => {
   return array.slice(array.length - 2);
 };

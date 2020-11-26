@@ -1,0 +1,59 @@
+.category__container {
+    animation: fadepage 0.2s forwards;
+    // overflow: hidden;
+
+    &--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            &:first-child {
+                @include para(2rem);
+            }
+
+            &:last-child {
+                @include para(1.5rem, $text-light);
+                cursor: pointer;
+                transition: 0.2s;
+
+                &:hover {
+                    color: lighten($text-light, $amount: 20%);
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadepage {
+    from {
+        opacity: 0;
+        transform: scale(1.16666);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.0);
+
+    }
+}
+
+//this is a class witch apply whren user come bakc
+.category__container--comeback {
+    animation: fadeoutpage 0.2s forwards;
+    overflow: hidden;
+
+}
+
+@keyframes fadeoutpage {
+    from {
+        opacity: 1;
+        transform: scale(1.0);
+
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.16666);
+    }
+}
