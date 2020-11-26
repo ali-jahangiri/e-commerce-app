@@ -3,8 +3,7 @@ import { createSelector } from "reselect";
 
 const productSelectore = (state) => state.products.response;
 
-export default (state, ownProps) => {
-  return createSelector(productSelectore, (item) =>
+export default (state, ownProps) =>
+  createSelector(productSelectore, (item) =>
     item.filter((el) => el.routeName === ownProps)
   )(state);
-};

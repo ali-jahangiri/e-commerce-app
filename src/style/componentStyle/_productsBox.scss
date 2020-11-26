@@ -1,6 +1,8 @@
 .productsbox {
     margin: 2rem 0;
-
+    animation: fadeinwithload .3s forwards;
+    opacity: 0;
+    cursor: pointer;
 
     &::after {
         content: "";
@@ -8,7 +10,7 @@
         height: 89%;
         position: absolute;
         width: 97%;
-        border: 0.3rem solid #d8d8d8;
+        border: 0.4rem solid #d8d8d8;
         border-radius: 4rem;
         top: 0;
         left: 0.4rem;
@@ -44,5 +46,11 @@
         top: -2rem;
         border-radius: 0.9rem;
         padding: 2px 10px;
+    }
+}
+
+@keyframes fadeinwithload {
+    to {
+        opacity: 1;
     }
 }

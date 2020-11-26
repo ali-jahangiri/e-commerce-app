@@ -1,0 +1,28 @@
+@mixin media ($breackpoint) {
+
+    @if $breackpoint=="xl" {
+        @media (min-width: 1200px) {
+            @content
+        }
+    }
+
+    @if $breackpoint=="lg" {
+        @media (min-width: 992px) {
+            @content
+        }
+    }
+
+    @if $breackpoint=="md" {
+        @media (min-width: 768px) {
+            @content
+        }
+    }
+
+
+
+    @if $breackpoint=="sm" {
+        @media (min-width: 576px) {
+            @content
+        }
+    }
+}

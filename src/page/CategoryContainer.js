@@ -6,7 +6,7 @@ import ProductsBox from "../components/Productbox";
 
 import selectePiceOfProduct from "../store/Selectors/selectePiceOfProduct";
 
-const CategoryContainer = ({ products, history }) => {
+const CategoryContainer = ({ products, history, match }) => {
   const [isGonnaBack, setIsGonnaBack] = useState(false);
   const otherCategoryHandler = () => {
     setIsGonnaBack(true);
@@ -34,7 +34,12 @@ const CategoryContainer = ({ products, history }) => {
               </div>
               <div className="row">
                 {items.map((el, index) => (
-                  <ProductsBox key={index} value={el} index={index} />
+                  <ProductsBox
+                    category={match.params.category}
+                    key={index}
+                    value={el}
+                    index={index}
+                  />
                 ))}
               </div>
             </div>
@@ -53,10 +58,7 @@ const mapStateToProps = (
       params: { category },
     },
   }
-) => {
-  console.log(category);
-  return {
-    products: selectePiceOfProduct(state, category),
-  };
-};
+) => ({
+  products: selectePiceOfProduct(state, category),
+});
 export default connect(mapStateToProps)(CategoryContainer);

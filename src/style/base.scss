@@ -1,13 +1,15 @@
 @import './variable';
 @import './Mixin.scss';
+@import './responsive';
 @import './componentStyle/Logo';
 @import './componentStyle/explore';
 @import './componentStyle/searchbox';
 @import './componentStyle/header';
 @import './componentStyle/shopbasket';
 @import './componentStyle/categorydrc';
-@import './componentStyle/categoryContainer';
+@import './pageStyle/categoryContainer';
 @import './componentStyle/productsBox';
+@import './pageStyle/oneproduct';
 
 
 html {
@@ -20,7 +22,5 @@ body {
 
 .img-rsp {
     width: 100%;
-
-
     height: 25rem;
 }
