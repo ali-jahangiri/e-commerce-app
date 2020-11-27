@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 import HomePage from "../page/Home";
 import CategoryContainer from "../page/CategoryContainer";
@@ -11,7 +11,7 @@ import store from "../store/store";
 import Checkout from "../page/Checjout";
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <Switch>
           <Route exact path="/" component={HomePage} />
@@ -21,7 +21,7 @@ const AppRouter = () => {
           <Route component={PageNotFound} />
         </Switch>
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
