@@ -7,7 +7,6 @@ const setErrorPlaceholer = (payload) => ({ type: SET_ERROR, payload });
 const setLoadingPlaceholder = () => ({ type: SET_LOADING });
 
 export const fetchDataAction = () => (dispatch) => {
-  dispatch(setLoadingPlaceholder());
   fetch("https://api.mocki.io/v1/3c9cc39c")
     .then((res) => res.json())
     .then((data) => {
@@ -23,7 +22,7 @@ export const fetchDataAction = () => (dispatch) => {
 const INIT = {
   response: [],
   error: null,
-  loading: false,
+  loading: true,
 };
 
 const productsReducer = (state = INIT, action) => {

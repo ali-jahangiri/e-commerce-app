@@ -2,39 +2,15 @@
     margin-bottom: 5rem;
 
     &__header {
-        margin: 1rem 0;
-        @include para(1.5rem, $text-light);
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        margin: 1rem 0;
 
-        p {
-            cursor: pointer;
-            padding: .5rem 1.5rem;
-            transition: 0.3s .2s cubic-bezier(0, 1.64, 1, 1);
-            position: relative;
-            align-self: flex-start;
-
-            &::before {
-                content: "";
-                display: block;
-                width: 2rem;
-                height: 0.5rem;
-                background-color: $blue;
-                position: absolute;
-                bottom: -0.5rem;
-                border-radius: 1rem;
-                opacity: 0;
-                transition: 0.5s;
-            }
-
-            &:hover {
-                transform: translate(1rem);
-
-                &::before {
-                    opacity: 1;
-                }
-            }
+        &>div:nth-child(2) {
+            margin-top: 3rem;
         }
+
+
     }
 
     img {

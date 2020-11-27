@@ -29,3 +29,17 @@
         margin: 0;
     }
 }
+
+@mixin loadinganime ($delay) {
+    animation: ballmovment 0.5s forwards alternate infinite $delay;
+
+    @keyframes ballmovment {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(-2rem);
+        }
+    }
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
+import Navigation from "../components/Navigation";
 import OneProductControler from "../components/OneProductControler";
+import ShopBaket from "../components/ShopBaket";
 
 import selecteOneProduct from "../store/Selectors/selecteSingleProduct";
 
@@ -17,10 +19,8 @@ const OneProduct = ({
       <div className="oneproduct">
         <div className="row">
           <div className="col-md-12 oneproduct__header">
-            <p onClick={() => history.goBack()}>
-              go back to {category} category
-            </p>
-            <p onClick={() => history.push("/")}>Home</p>
+            <Navigation category={category} />
+            <ShopBaket />
           </div>
           <div className="col-md-6 col-xl-4 offset-xl-2">
             <img src={imageUrl} alt={name} />

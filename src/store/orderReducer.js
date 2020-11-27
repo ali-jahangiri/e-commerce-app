@@ -18,7 +18,7 @@ const orderReducer = (state = [], action) => {
         el.name === action.payload ? { ...el, count: ++el.count } : el
       );
     case REMOVE_FROM_CARD:
-      return state.filter((el) => el.id !== action.payload);
+      return state.filter((el) => el.name !== action.payload);
     default:
       return state;
   }

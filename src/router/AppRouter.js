@@ -8,6 +8,7 @@ import PageNotFound from "../page/404";
 import OneProduct from "../page/OneProduct";
 
 import store from "../store/store";
+import Checkout from "../page/Checjout";
 const AppRouter = () => {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ const AppRouter = () => {
           <Route exact path="/" component={HomePage} />
           <Route path="/category/:category" component={CategoryContainer} />
           <Route path="/product/:category/:id" component={OneProduct} />
+          <Route path="/checkout" component={Checkout} />
           <Route component={PageNotFound} />
         </Switch>
       </Provider>
